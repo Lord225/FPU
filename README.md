@@ -56,13 +56,13 @@ FPU to 16 bitowy układ zdolny do
 ## Opis działania
 
 ### Aproksymacja
-Film przedstawia działanie układu FPU. W filmie przedstawiono aproksymacje pade'a dla funkcji $f(x) = sin(x)$, dokładniej używa wyprowadzonego wzoru:
+Film przedstawia działanie układu FPU. W filmie pokazano program obliczający aproksymacje pade'a dla funkcji $f(x) = sin(x)$, dokładniej używa on wyprowadzonego wzoru
 
 $$
 sin(x) \approx \frac{2710x-22016}{\left(x-16.25\right)x+282.3}+86.94-9.711x
 $$
 
-Co można zapisać w pythonie
+Co w kodzie wygląda następująco (rozpisanym w uproszczony sposób)
 
 ```py
 def f(x):
