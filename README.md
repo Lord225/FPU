@@ -25,6 +25,8 @@ FPU to 16 bitowy układ zdolny do
 |-----------|-----------|--------|---------|-------|
 | 16 bit    | 16 bit    | 3bit   | 16 bit  | 7bit  |
 
+## Flagi
+
 | Bit   | Opis           |
 |-------|----------------|
 | 0     | Wrong          |
@@ -34,6 +36,8 @@ FPU to 16 bitowy układ zdolny do
 | 4     | Round          |
 | 5     | Sub epsilon ops|
 | 6     | Sign           |
+
+## Operacje
 
 | Operacja | OpCode | Wejście A | Wejście B | Wyjście |
 |----------|--------|-----------|-----------|---------|
@@ -46,6 +50,12 @@ FPU to 16 bitowy układ zdolny do
 | `ftou`     | `111`    | -         | f16       | u16     |
 
 # Architektura 
+
+Architektura jest wzorowana na standardzie IEEE 754. Posiada wsparcie dla liczb zdenormalizowanych, NaN, Inf, Sub epsilon operations, zaokrąglanie jest zablokowane na trunckowanie. FPU jest podzielone na 2 części
+* System logiki wykładnika
+* System przetwarzania mantysy
+
+W zależności od operacji dane przebiegają przez odpowiednie części układu. Górna część widoczna na pierwszym obrazku jest odpowiedzialna za dodawanie, odejmowanie i zamianę float na int. Dolna część układu widoczna od boku jest odpowiedzialna za mnożenie (Zielony układ), dzielenie (Pomarańczowy) jak również zamianę int na float. Układ wykładnika jest wspólny dla wszystkich operacji i jest również zintegrowany z układem sterującym.
 
 ![render fpu](imgs/info1.png)
 ![render fpu](imgs/bitmap2.png)
