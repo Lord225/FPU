@@ -48,7 +48,7 @@ FPU to 16 bitowy układ zdolny do
 # Architektura 
 
 ![render fpu](imgs/info1.png)
-
+![render fpu](imgs/bitmap2.png)
 
 ## Film demonstracyjny
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_oZ8A8Fcuyk/0.jpg)](https://www.youtube.com/watch?v=_oZ8A8Fcuyk)
