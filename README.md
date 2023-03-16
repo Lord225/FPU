@@ -8,6 +8,47 @@ Projekt 16 bitowego układu FPU zbudowany w minecraftie. Autorzy
 
 ![render fpu](imgs/fpu32.png)
 
+# Funkcje FPU
+
+FPU to 16 bitowy układ zdolny do
+* Dodawania   (fadd)
+* Odejmowania (fsub)
+* Mnożenia    (fmul)
+* Dzielenia   (fdiv)
+* Konwersji na f16 (itof)
+* Konwersji na i16 (ftoi)
+* Konwersji na u16 (ftou)
+
+## Wejścia i wyjścia
+
+| Wejście A | Wejście B | Opcode | Wyjście | Flagi |
+|-----------|-----------|--------|---------|-------|
+| 16 bit    | 16 bit    | 3bit   | 16 bit  | 7bit  |
+
+| Bit   | Opis           |
+|-------|----------------|
+| 0     | Wrong          |
+| 1     | DivByZero      |
+| 2     | Inf            |
+| 3     | NaN            |
+| 4     | Round          |
+| 5     | Sub epsilon ops|
+| 6     | Sign           |
+
+| Operacja | OpCode | Wejście A | Wejście B | Wyjście |
+|----------|--------|-----------|-----------|---------|
+| `fadd`     | `001`    | f16       | f16       | f16     |
+| `fsub`     | `010`    | f16       | f16       | f16     |
+| `fmul`     | `011`    | f16       | f16       | f16     |
+| `fdiv`     | `100`    | f16       | f16       | f16     |
+| `itof`     | `101`    | -         | i16       | f16     |
+| `ftoi`     | `110`    | -         | f16       | i16     |
+| `ftou`     | `111`    | -         | f16       | u16     |
+
+# Architektura 
+
+![render fpu](imgs/info1.png)
+
 
 ## Film demonstracyjny
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_oZ8A8Fcuyk/0.jpg)](https://www.youtube.com/watch?v=_oZ8A8Fcuyk)
