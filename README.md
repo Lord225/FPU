@@ -9,8 +9,7 @@ Projekt 16 bitowego układu FPU zbudowany w minecraftie. Autorzy
 ![render fpu](imgs/fpu32.png)
 
 # Funkcje FPU
-
-FPU to 16 bitowy układ zdolny do
+FPU to 16 bitowy układ do obliczeń zmiennoprzecinkowych opracowany i zbudowany w minecraft'cie - jest on zdolny do
 * Dodawania   (fadd)
 * Odejmowania (fsub)
 * Mnożenia    (fmul)
@@ -49,7 +48,11 @@ FPU to 16 bitowy układ zdolny do
 | `ftoi`     | `110`    | -         | f16       | i16     |
 | `ftou`     | `111`    | -         | f16       | u16     |
 
+FPU jest dostępne na serwerze `redstonefun.pl` pod komendą `/warp fpu` lub `/warp masz_cpu5_w_swoim_fpu`
+
 # Architektura 
+![render fpu](imgs/info1.png)
+![render fpu](imgs/bitmap2.png)
 
 Architektura jest wzorowana na standardzie IEEE 754. Posiada wsparcie dla liczb zdenormalizowanych, NaN, Inf, Sub epsilon operations, zaokrąglanie jest zablokowane na trunckowanie. FPU jest podzielone na 2 części
 * System logiki wykładnika
@@ -57,10 +60,8 @@ Architektura jest wzorowana na standardzie IEEE 754. Posiada wsparcie dla liczb 
 
 W zależności od operacji dane przebiegają przez odpowiednie części układu. Górna część widoczna na pierwszym obrazku jest odpowiedzialna za dodawanie, odejmowanie i zamianę float na int. Dolna część układu widoczna od boku jest odpowiedzialna za mnożenie (Zielony układ), dzielenie (Pomarańczowy) jak również zamianę int na float. Układ wykładnika jest wspólny dla wszystkich operacji i jest również zintegrowany z układem sterującym.
 
-![render fpu](imgs/info1.png)
-![render fpu](imgs/bitmap2.png)
 
-## Film demonstracyjny
+# Film demonstracyjny
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_oZ8A8Fcuyk/0.jpg)](https://www.youtube.com/watch?v=_oZ8A8Fcuyk)
 
 ## Opis działania
