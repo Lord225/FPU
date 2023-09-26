@@ -1,5 +1,7 @@
 # FPU
 
+[English README](README-en.md)
+
 Projekt 16 bitowego układu FPU zbudowany w minecraftie. Autorzy
 
 * Lord225
