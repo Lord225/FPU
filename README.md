@@ -5,7 +5,7 @@
 Projekt 16 bitowego układu FPU zbudowany w minecraftie. Autorzy
 
 * Lord225
-* GwiezdnyKartofel
+* Gwiezdny
 * BrzechiX
 
 ![render fpu](imgs/fpu32.png)
